@@ -1,0 +1,12 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.app-icon {
+	height: 100px;
+	width: 100px;
+}
+
+.list-unstyled li {
+	margin-bottom: .5rem;
+}
