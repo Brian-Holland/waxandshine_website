@@ -33,16 +33,16 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#home" role="button">Home</a>
+                    <a class="nav-link text-light" href="#home" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#packages" role="button">Packages</a>
+                    <a class="nav-link text-light" href="#packages" >Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#payment" role="button">Payment</a>
+                    <a class="nav-link text-light" href="#payment" >Payment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#contact" role="button">Contact</a>
+                    <a class="nav-link text-light" href="#contact" >Contact</a>
                 </li>
             </ul>
         </div>
@@ -198,7 +198,7 @@
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>     
    <script type="text/javascript">
- $(document).on('click','.navbar-collapse.in',function(e) {
+    $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {
         $(this).collapse('hide');
     }
