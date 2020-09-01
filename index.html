@@ -156,26 +156,26 @@
 <!--Begin Payment Header-->
 <section>
     <div class="container bg-dark text-light mt-4 mb-3">
-    <div class="px-3 py-3 pt-md-3 pb-md-3 text-center">
+    <div class="px-2 py-3 pt-md-3 pb-md-3 text-center">
         <h1 id="payment" class="display-4">Payment Methods</h1>
         <p class="lead">The following forms of payment are currently accepted:</p>
 <!--End Payment Header-->
 
         <!--Begin Payment Methods-->
         <div class="row">
-            <div class="col-lg-3 col-sm-6 pb-4 pt-2">
+            <div class="col-sm-6 col-md-6 col-lg-3 pb-4 pt-2">
                 <h5 class="pb-3">Cash</h5>
                 <img class="app-icon cash-icon" src="cash-icon.png" alt="cash" />
             </div>
-            <div class="col-lg-3 col-sm-6 pb-4 pt-2">
+            <div class="col-sm-6 col-md-6 col-lg-3 pb-4 pt-2">
                 <h5 class="pb-3">Venmo</h5>
                 <img class="app-icon" src="venmo-icon.png" alt="venmo" />
             </div>
-            <div class="col-lg-3 col-sm-6 pb-4 pt-2">
+            <div class="col-sm-6 col-md-6 col-lg-3 pb-4 pt-2">
                 <h5 class="pb-3">CashApp</h5>
                 <img class="app-icon" src="cashapp-logo.png" alt="cashapp" />
             </div>
-            <div class="col-lg-3 col-sm-6 pb-4 pt-2">
+            <div class="col-sm-6 col-md-6 col-lg-3 pb-4 pt-2">
                 <h5 class="pb-3">Zelle</h5>
                 <img class="app-icon" src="zelle-icon.png" alt="zelle" />
             </div>
@@ -188,7 +188,7 @@
     <div class="container mt-4 bg-dark text-light">
     <!--Begin Contact Header-->
     <div class="px-md-4 text-center">
-    <h1 id="contact" class="display-4">Contact</h1>
+    <h1 id="contact" class="display-4 py-3">Contact</h1>
         <p class="lead pb-3">If you would like to schedule an appointment or have any questions regarding my services, please give me a call or email me at the information below.
         </p>
     </div>
@@ -226,17 +226,30 @@
     
     
    <!--Bootstrap Scripts-->
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-   <script>
-     var divId;
+    <script>
 
-$('.nav-link').click(function(){    
-  divId = $(this).attr('href');
-   $('html, body').animate({
-    scrollTop: $(divId).offset().top - 80
-  }, 100);
-});   
+$(".navbar-nav").on('click','a', function(event){ 
+  event.preventDefault();
+
+  /* // Which link was clicked?
+  console.log($(this).attr("href"));
+ */
+
+  // Intro case:
+  if( $(this).attr("href")=="#home" ){
+    $("body").scrollTop(0);
+  }
+
+  // All the other cases.
+  if(typeof($(this).attr("href"))!="undefined" && $(this).attr("href")!="#home"){
+    var o =  $( $(this).attr("href") ).offset();   
+    var sT = o.top - $(".navbar").outerHeight(true);
+    window.scrollTo(0,sT);
+  }
+})
+    </script>
 </body>
 </html>
