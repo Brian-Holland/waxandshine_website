@@ -1,12 +1,7 @@
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 104px;
 }
 
-div.carousel-item img {
-	height: 25%;
-	width: 100% !important;
-}
 .carousel-item img {
 	height: 50%;
 	width: 50%;
