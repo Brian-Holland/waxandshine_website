@@ -7,6 +7,10 @@ a {
 	text-decoration: inherit;
 }
 
+a:hover {
+	color: inherit;
+}
+
 .carousel-item img {
 	height: 50%;
 	width: 50%;
