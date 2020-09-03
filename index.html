@@ -154,7 +154,7 @@
 <!--End Full Detail Price-->
 
 <section id="photos" >       
-    <div class="container bg-dark text-light mt-4 pb-b">
+    <div class="container bg-dark text-light mt-4 pb-3">
         <div class="px-md-4 pt-3 mb-2 text-center">
             <h1 class="display-4">Photos</h1>
         </div>
@@ -268,13 +268,13 @@ $(".navbar-nav").on('click','a', function(event){
   console.log($(this).attr("href"));
  */
 
-  // Intro case:
-  if( $(this).attr("href")=="#packages" ){
+ /*  // Intro case:
+  if( $(this).attr("href")=="#home" ){
     $("body").scrollTop(0);
-  }
+  } */
 
   // All the other cases.
-  if(typeof($(this).attr("href"))!="undefined" && $(this).attr("href")!="#packages"){
+  if(typeof($(this).attr("href"))!="undefined"){
     var o =  $( $(this).attr("href") ).offset();   
     var sT = o.top - $(".navbar").outerHeight(true);
     window.scrollTo(0,sT);
