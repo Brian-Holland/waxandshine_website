@@ -3,12 +3,13 @@ html {
 	scroll-padding-top: 104px;
 }
 
-h1[id]:before {
-	display: block;
-	height: 104px; /* equal to the header height */
-	margin-top: -104px; /* negative margin equal to the header height */
-	visibility: hidden;
-	content: "";
+div.carousel-item img {
+	height: 25%;
+	width: 100% !important;
+}
+.carousel-item img {
+	height: 50%;
+	width: 50%;
 }
 
 .app-icon {
