@@ -48,11 +48,11 @@
 <!--End Navbar-->
 
     
-<section>
+<section id="packages">
     <div class="container bg-dark">  
     <!--Packages Header-->
     <div class="py-4 px-md-4 text-center text-light">
-        <h1 id="packages" class="display-4">Detail Packages</h1>
+        <h1 class="display-4">Detail Packages</h1>
         <p class="lead">
             I am proud to offer the following packages. Please note that special requests may be made for an additional fee.
         </p>
@@ -154,14 +154,13 @@
 </section>
 <!--End Full Detail Price-->
 
-<section>
-        
-    <div class="container bg-dark text-light mt-4 mb-2">
-        <div class="py-3 px-md-4 text-center">
-            <h1 id="photos" class="display-4">Photos</h1>
+<section id="photos" >       
+    <div class="container bg-dark text-light mt-4 pb-4">
+        <div class="px-md-4 text-center">
+            <h1 class="display-4">Photos</h1>
         </div>
-        <div id="carouselExampleControls" class="carousel slide px-4" data-ride="carousel">
-            <div class="carousel-inner pt-3 pb-5">
+        <div id="carouselExampleControls" class="carousel slide px-3" data-ride="carousel">
+            <div class="carousel-inner py-3 mb-2">
               <div class="carousel-item active">
                 <img src="honda_BA.jpg" class="d-block w-100" alt="honda before and after">
               </div>
@@ -185,10 +184,10 @@
 </section>
 
 <!--Begin Payment Header-->
-<section>
+<section id="payment">
     <div class="container bg-dark text-light mt-4 mb-3">
     <div class="px-2 py-3 pt-md-3 pb-md-3 text-center">
-        <h1 id="payment" class="display-4">Payment Methods</h1>
+        <h1 class="display-4">Payment Methods</h1>
         <p class="lead">The following forms of payment are currently accepted:</p>
 <!--End Payment Header-->
 
@@ -215,11 +214,11 @@
 </div>
 </section>
 
-<section>
+<section id="contact" >
     <div class="container mt-4 bg-dark text-light">
     <!--Begin Contact Header-->
     <div class="px-md-4 text-center">
-    <h1 id="contact" class="display-4 py-3">Contact</h1>
+    <h1 class="display-4 py-3">Contact</h1>
         <p class="lead pb-3">If you would like to schedule an appointment or have any questions regarding my services, please give me a call or email me at the information below.
         </p>
     </div>
@@ -276,8 +275,8 @@ $(".navbar-nav").on('click','a', function(event){
 
   // All the other cases.
   if(typeof($(this).attr("href"))!="undefined" && $(this).attr("href")!="#home"){
-    var o =  $( $(this).attr("href") ).offset();   
-    var sT = o.top - $(".navbar").outerHeight(true);
+    let o =  $( $(this).attr("href") ).offset();   
+    let sT = o.top - $(".navbar").outerHeight(true);
     window.scrollTo(0,sT);
   }
 })
