@@ -2,6 +2,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
 .carousel-item img {
 	height: 50%;
 	width: 50%;
