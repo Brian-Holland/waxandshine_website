@@ -11,9 +11,9 @@ a:hover {
 	color: inherit;
 }
 
-.carousel-item img {
-	height: 50%;
-	width: 50%;
+.carousel-item > img {
+	height: 75vh;
+	width: 75vh;
 }
 
 .app-icon {
